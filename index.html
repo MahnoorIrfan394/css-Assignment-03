@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>MDN-Web Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">MDN</div>
+        <nav>
+            <div class="html">
+                <a href="#html">HTML</a>
+                <div class="html-menu">
+                    <ul>
+                        <li>Introduction</li>
+                        <li>HTML Elements</li>
+                        <li>Attributes</li>
+                        <li>Tatorials</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="css">
+                <a href="#CSS">CSS</a>
+                <div class="css-menu">
+                    <ul>
+                        <li>Introduction</li>
+                        <li>CSS Elements</li>
+                        <li>Attributes</li>
+                        <li>Proparties</li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="#javascript">JavaScript</a>
+            <a href="#web aips">Web AIPs</a>
+            <a href="#all">All</a>
+            <a href="#learn">Learn</a>
+            <a href="#tool">Tools</a>
+            <a href="#about">About</a>
+            <a href="#blog">Blogs</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fa-solid fa-magnifying-glass-minus"></i>
+            <i class="fa-solid fa-up-right-from-square"></i>
+        </div>
+    </header>
+
+    <div class="box">
+
+        <div class="left">
+            <button class="bnt">menu</button>
+
+            <div class="links">
+                <a href="#html">HTML</a>
+                <a href="#guide">Guides</a>
+                <a href="#terms">Define Terms With Html</a>
+                <a href="#attributes">Use Data Attributes</a>
+                <a href="#images">Use cross-origin images</a>
+                <a href="#javascript">Add Java Scripts</a>
+                <a href="#author">Author fast-loading</a>
+                <a href="#element">Elements</a>
+                <a href="#attributes">Attributes</a>
+                <a href="#global">Global Attributes</a>
+            </div>
+        </div>
+
+        <div class="center">
+
+            <h1 id="html"><b><i>Basic Connceps Of HTML</i></b></h1>
+
+            <p>HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and
+                structure of web content. Other technologies besides HTML are generally used to describe a web page's
+                appearance/presentation (CSS) or functionality/behavior (JavaScript).</p>
+
+            <p>"Hypertext" refers to text containing links that connect web pages to one another, either within a
+                single website or between websites. Links are a fundamental aspect of the Web. By uploading content to
+                the Internet and linking it to pages created by other people, you become an active participant in the
+                World Wide Web.</p>
+
+            <p>HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup
+                includes special "elements".</p>
+
+            <h1 id="guide">HTML cheatsheet for syntax and common tasks</h1>
+
+            <p>An "element" is a single part of a webpage. Some elements are large and hold smaller elements like
+                containers. Some elements are small and are "nested" inside larger ones. By default, "inline elements"
+                appear next to one another in a webpage. They take up only as much width as they need in a page and fit
+                together horizontally like words in a sentence or books shelved side-by-side in a row. All inline
+                elements can be placed within the element.</p>
+
+            <p>An "element" is a single part of a webpage. Some elements are large and hold smaller elements like
+                containers. Some elements are small and are "nested" inside larger ones. By default, "inline elements"
+                appear next to one another in a webpage. They take up only as much width as they need in a page and fit
+                together horizontally like words in a sentence or books shelved side-by-side in a row. All inline
+                elements can be placed within the element.</p>
+
+            <h1 id="terms">Define terms with HTML</h1>
+
+            <p>HTML provides several ways to convey description semantics, whether inline or as structured glossaries.
+                In this article, we'll cover how to properly mark up keywords when you're defining them.</p>
+
+            <table class="tab">
+                <tr>
+                    <th>Prerequisites:</th>
+                    <td>You need to be familiar with how to create a basic HTML document.</td>
+                </tr>
+                <tr>
+                    <th>Objective:</th>
+                    <td>Learn how to introduce new keywords and how to build description lists.</td>
+                </tr>
+            </table>
+
+            <p>When you need a term defined, you probably go straight to a dictionary or glossary. Dictionaries and
+                glossaries formally associate keywords with one or more descriptions, as in this case:</p>
+
+            <h1 id="attributes">Use Data Attributes</h1>
+
+            <p>HTML is designed with extensibility in mind for data that should be associated with a particular element
+                but need not have any defined meaning. data-* attributes allow us to store extra information on
+                standard, semantic HTML elements without other hacks such as non-standard attributes, or extra
+                properties on DOM.</p>
+
+            <h1>HTML syntax</h1>
+
+            <p>The syntax is simple. Any attribute on any element whose attribute name starts with data- is a data
+                attribute. Say you have some articles and you want to store some extra information that doesn't have any
+                visual representation. Just use data attributes.</p>
+
+            <h1 id="images">Images</h1>
+
+            <p>HTML provides a crossorigin attribute for images that, in combination with an appropriate CORS header,
+                allows images defined by the element that are loaded from foreign origins to be used in a
+                as if they had been loaded from the current origin.
+
+                See CORS settings attributes for details on how the crossorigin attribute is used.
+
+                In this article
+                Security and tainted canvases
+                Storing an image from a foreign origin
+                See also
+                Security and tainted canvases
+                Because the pixels in a canvas's bitmap can come from a variety of sources, including images or
+                videos retrieved from other hosts, it's inevitable that security problems may arise.
+
+                As soon as you draw into a canvas any data that was loaded from another origin without CORS
+                approval, the canvas becomes tainted. A tainted canvas is one which is no longer considered secure,
+                and any attempts to retrieve image data back from the canvas will cause an exception to be thrown.
+
+                If the source of the foreign content is an HTML or SVG element, attempting to retrieve the
+                contents of the canvas isn't allowed.
+
+                If the foreign content comes from an image obtained from either as HTMLCanvasElement or ImageBitMap,
+                and the image source doesn't meet the same origin rules, attempts to read the canvas's contents are
+                blocked.
+
+                Calling any of the following on a tainted canvas will result in an error:
+
+                Calling getImageData() on the canvas's context
+                Calling toBlob(), toDataURL() or captureStream() on the element itself
+                Attempting any of these when the canvas is tainted will cause a SecurityError to be thrown. This
+                protects users from having private data exposed by using images to pull information from remote
+                websites without permission.
+
+                Storing an image from a foreign origin
+                In this example, we wish to permit images from a foreign origin to be retrieved and saved to
+                local storage. Implementing this requires configuring the server as well as writing code for the
+                website itself.
+
+                Web server configuration
+                The first thing we need is a server that's configured to host images with the
+                Access-Control-Allow-Origin header configured to permit cross-origin access to image files.
+
+                Let's assume we're serving our site using Apache. Consider the HTML5 Boilerplate Apache server
+                configuration file for CORS images, shown below:</p>
+
+            <h1 id="javascript">Add Java Script</h1>
+
+            <p>Take your webpages to the next level by harnessing JavaScript. Learn in this article how to trigger
+                JavaScript right from your HTML documents.</p>
+
+            <table class="tab">
+                <tr>
+                    <th>Prerequisites:</th>
+                    <td>You need to be familiar with how to create a basic HTML document.</td>
+                </tr>
+                <tr>
+                    <th>Objective:</th>
+                    <td>Learn how to trigger JavaScript in your HTML file, and learn the most important best practices
+                        for keeping JavaScript accessible.</td>
+                </tr>
+            </table>
+
+            <h1>How to trigger JavaScript from HTML</h1>
+
+            <p>Within a browser, JavaScript doesn't do anything by itself. You run JavaScript from inside your HTML
+                webpages. To call JavaScript code from within HTML, you need the element. Accessibility is a major issue
+                in any software development. JavaScript can make your website more accessible if you use it wisely, or
+                it can become a disaster if you use scripting without care. To make JavaScript work in your favor, it's
+                worth knowing about certain best practices for adding JavaScript:</p>
+
+            <h1 id="author">Author fast-loading HTML pages</h1>
+
+            <p>An optimized web page not only provides for a more responsive site for your visitors but also reduces the
+                load on your web servers and internet connection. This can be crucial for high volume sites or sites
+                which have a spike in traffic due to unusual circumstances such as breaking news stories. This article
+                describes how to improve page load times based on common knowledge and experimentation.
+
+                Optimizing page load performance is not just for content which will be viewed by narrowband dial-up or
+                mobile device visitors. It is just as important for broadband content and can lead to dramatic
+                improvements even for your visitors with the fastest connections.</p>
+
+            <h1>Tips</h1>
+
+            <p>Page weight is by far the most important factor in page-load performance.
+
+                Reducing page weight through the elimination of unnecessary whitespace and comments, commonly known as
+                minimization, and by moving inline script and CSS into external files, can improve download performance
+                with minimal need for other changes in the page structure.</p>
+
+            <h1 id="global">Global Attributes</h1>
+
+            <p>Global attributes are attributes common to all HTML elements; they can be used on all elements, though
+                they may have no effect on some elements. Every HTML element is a member of one or more content
+                categories — these categories group elements that share common characteristics.
+                HTML comments are used to add explanatory notes to the markup or to prevent the browser from
+                interpreting specific parts of the document.</p>
+
+        </div>
+
+        <div class="right">
+            <h1>In This Artical</h1>
+            <button class="btn">menu</button>
+
+            <nav class="rightlink">
+                <a href="#begnnier-tutorial">Begnnier Tutorial</a>
+                <a href="#guides">Guides</a>
+                <a href="#how-to">How To</a>
+                <a href="#reference">Reference</a>
+                <a href="#related-topics">Related Topics</a>
+            </nav>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-box">
+
+            <div class="footer-logo">
+                <h2>MDN</h2>
+                <p>Your blueprint for a better internet.</p>
+
+                <div class="icons">
+                    <i class="fa-brands fa-github"></i>
+                    
+                    <i class="fa-solid fa-rss"></i>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>MDN</h3>
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+                <a href="#">Mozilla Careers</a>
+                
+            </div>
+
+            <div class="footer-links">
+                <h3>Contribute</h3>
+                <a href="#">MDN Community</a>
+                <a href="#">Community resources</a>
+                <a href="#">Writing guidelines</a>
+                
+            </div>
+
+            <div class="footer-links">
+                <h3>Developers</h3>
+                <a href="#">Web technologies</a>
+                <a href="#">Learn web development</a>
+                <a href="#">Guides</a>
+               
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html> 
