@@ -1,298 +1,889 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    <title>MDN-Web Page</title>
-    <link rel="stylesheet" href="./style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML elements reference | MDN</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" 
+referrerpolicy="no-referrer">
+
+<link rel="stylesheet" href="./style.css">
 </head>
+<body id="top">
 
-<body>
+    <header class="top-header">
+        <a class="logo" href="#top" aria-label="MDN home">
+            <span class="logo-mark">M</span>
+            <span>mdn</span><span class="logo-line">_</span>
+        </a>
 
-    <header>
-        <div class="logo">MDN</div>
-        <nav>
-            <div class="html">
-                <a href="#html">HTML</a>
-                <div class="html-menu">
-                    <ul>
-                        <li>Introduction</li>
-                        <li>HTML Elements</li>
-                        <li>Attributes</li>
-                        <li>Tatorials</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="css">
-                <a href="#CSS">CSS</a>
-                <div class="css-menu">
-                    <ul>
-                        <li>Introduction</li>
-                        <li>CSS Elements</li>
-                        <li>Attributes</li>
-                        <li>Proparties</li>
-                    </ul>
-                </div>
-            </div>
-
-            <a href="#javascript">JavaScript</a>
-            <a href="#web aips">Web AIPs</a>
-            <a href="#all">All</a>
-            <a href="#learn">Learn</a>
-            <a href="#tool">Tools</a>
-            <a href="#about">About</a>
-            <a href="#blog">Blogs</a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="#html">HTML⌄</a>
+            <a href="#html">CSS⌄</a>
+            <a href="#html">JavaScript⌄</a>
+            <a href="#html">Web APIs⌄</a>
+            <a href="#html">All⌄</a>
+            <a href="#html">Learn⌄</a>
+            <a href="#html">Tools⌄</a>
+            <a href="#html">About⌄</a>
+            <a href="#html">Blog</a>
         </nav>
 
-        <div class="icons">
-            <i class="fa-solid fa-magnifying-glass-minus"></i>
-            <i class="fa-solid fa-up-right-from-square"></i>
+        <div class="header-icons">
+            <button type="button" aria-label="Theme"><i class="fa-solid fa-circle-half-stroke"></i></button>
+            <button type="button" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
     </header>
 
-    <div class="box">
+    <div class="breadcrumb">
+        <a href="#html">Web</a> ›
+        <a href="#html">HTML</a> ›
+        <a href="#main-root">Reference</a> ›
+        <span>Elements</span>
+    </div>
 
-        <div class="left">
-            <button class="bnt">menu</button>
+    <div class="page-tools">
+        <span><i class="fa-solid fa-circle-half-stroke"></i>Theme</span>
+        <span><i class="fa-solid fa-icons"></i>English (US)</span>
+    </div>
 
-            <div class="links">
-                <a href="#html">HTML</a>
-                <a href="#guide">Guides</a>
-                <a href="#terms">Define Terms With Html</a>
-                <a href="#attributes">Use Data Attributes</a>
-                <a href="#images">Use cross-origin images</a>
-                <a href="#javascript">Add Java Scripts</a>
-                <a href="#author">Author fast-loading</a>
-                <a href="#element">Elements</a>
-                <a href="#attributes">Attributes</a>
-                <a href="#global">Global Attributes</a>
+    <div class="page-layout">
+
+        <aside class="left-sidebar">
+            <label class="filter-label" for="filterInput">Filter</label>
+            <input type="search" id="filterInput"
+                   placeholder= "Filter"
+                   aria-label="Filter elements">
+
+            <h3 id="html">HTML</h3>
+
+            <details>
+                <summary>Guides</summary>
+                <a href="#main-root">HTML basics</a>
+                <a href="#text-content">Text content</a>
+            </details>
+
+            <h3>How to</h3>
+            <ul class="how-list">
+                <li><a href="#inline-text">Define terms with HTML</a></li>
+                <li><a href="#data-attributes">Use data attributes</a></li>
+                <li><a href="#image-media">Use cross-origin images</a></li>
+                <li><a href="#image-media">Add a hitmap on top of an image</a></li>
+                <li><a href="#document-metadata">Author fast-loading HTML pages</a></li>
+                <li><a href="#scripting">Add JavaScript</a></li>
+            </ul>
+
+            <h3>Reference</h3>
+            <details open>
+                <summary>Elements</summary>
+                <ul class="element-list">
+                    
+                    
+                    <li><a href="#main root" data-element="html">&lt;html&gt;</a></li>
+                    <li><a href="#inline-text" data-element="a">&lt;a&gt;</a></li>
+                    
+                    <li><a href="#inline-text" data-element="abbr">&lt;abbr&gt;</a></li>
+                    <li><a href="#content-sectioning" data-element="article">&lt;article&gt;</a></li>
+                    <li><a href="#content-sectioning" data-element="aside">&lt;aside&gt;</a></li>
+                    <li><a href="#image-media" data-element="audio">&lt;audio&gt;</a></li>
+                    <li><a href="#sectioning-root" data-element="body">&lt;body&gt;</a></li>
+                    <li><a href="#forms" data-element="button">&lt;button&gt;</a></li>
+                    <li><a href="#text-content" data-element="div">&lt;div&gt;</a></li>
+                    <li><a href="#forms" data-element="form">&lt;form&gt;</a></li>
+                    <li><a href="#content-sectioning" data-element="h1">&lt;h1&gt;–&lt;h6&gt;</a></li>
+                    <li><a href="#image-media" data-element="img">&lt;img&gt;</a></li>
+                    <li><a href="#forms" data-element="input">&lt;input&gt;</a></li>
+                    <li><a href="#text-content" data-element="p">&lt;p&gt;</a></li>
+                    <li><a href="#content-sectioning" data-element="section">&lt;section&gt;</a></li>
+                    <li><a href="#table-content" data-element="table">&lt;table&gt;</a></li>
+                </ul>
+            </details>
+        </aside>
+
+        <main class="main-content">
+            <h1>HTML elements reference</h1>
+
+            <p>
+                This page lists all the
+                <a href="#main-root">HTML elements</a>,
+                which are created using tags.
+            </p>
+
+            <p>
+                They are grouped by function to help you find what you
+                have in mind easily. An alphabetical list of all
+                elements is provided in the sidebar on every element's
+                page as well as this one.
+            </p>
+
+            <div class="note">
+                <span class="note-icon">ⓘ</span>
+                <p><strong>Note:</strong> For more information about the basics of HTML 
+                elements and attributes, see Anatomy of an HTML element.
+                </p>
             </div>
-        </div>
 
-        <div class="center">
+            <section class="doc-section" id="main-root">
+                <h2>Main root</h2>
+                <table>
+                    <thead>
+                        <tr><th>Element</th><th>Description</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="filter-row" data-element="html">
+                            <td><code>&lt;html&gt;</code></td>
 
-            <h1 id="html"><b><i>Basic Connceps Of HTML</i></b></h1>
+                            <td>Represents the root (top-level element) of an HTML document, 
+                               so it is also referred to as the root element.All other elements
+                               must be descendants of this element.
 
-            <p>HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and
-                structure of web content. Other technologies besides HTML are generally used to describe a web page's
-                appearance/presentation (CSS) or functionality/behavior (JavaScript).</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-            <p>"Hypertext" refers to text containing links that connect web pages to one another, either within a
-                single website or between websites. Links are a fundamental aspect of the Web. By uploading content to
-                the Internet and linking it to pages created by other people, you become an active participant in the
-                World Wide Web.</p>
+            <section class="doc-section" id="document-metadata">
+                <h2>Document metadata</h2>
+                <p>Metadata contains information about the page. This includes information
+                     about styles, scripts and data to help software (search engines, 
+                     browsers, etc.) use and render the page. Metadata for styles and 
+                     scripts may be defined in the page or linked to another file that has
+                      the information.</p>
+                <table>
+                    <thead>
+                        <tr><th>Element</th><th>Description</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="filter-row" data-element="base">
+                            <td><code>&lt;base&gt;</code></td>
+                            <td>Specifies the base URL to use for all relative URLs in a 
+                                document. There can be only one such element in a
+                                 document.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="head">
+                            <td><code>&lt;head&gt;</code></td>
+                            <td>Contains machine-readable information (metadata) about 
+                                the document, like its title, scripts,
+                                 and style sheets.
+                         </td>
 
-            <p>HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup
-                includes special "elements".</p>
+                        </tr>
+                        <tr class="filter-row" data-element="link">
+                            <td><code>&lt;link&gt;</code></td>
+                            <td>Specifies relationships between the current document and an external resource. This element is most commonly used to link to CSS but is also used to establish site icons (both "favicon"
+                                 style icons and icons for the home screen and apps on mobile devices) 
+                                 among other things.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="meta">
+                            <td><code>&lt;meta&gt;</code></td>
 
-            <h1 id="guide">HTML cheatsheet for syntax and common tasks</h1>
+                            <td>Represents metadata that cannot be represented by other
+                                 HTML meta-related elements, like base, link,
+                                 script, style and title. 
+                                    </td>
+                        </tr>
+                        <tr class="filter-row" data-element="style">
+                            <td><code>&lt;style&gt;</code></td>
+                            <td>Contains style information for a document or part of a document. It
+                                 contains CSS, which is applied to the contents of the document containing 
+                                 this element.</td>
+                        </tr>
 
-            <p>An "element" is a single part of a webpage. Some elements are large and hold smaller elements like
-                containers. Some elements are small and are "nested" inside larger ones. By default, "inline elements"
-                appear next to one another in a webpage. They take up only as much width as they need in a page and fit
-                together horizontally like words in a sentence or books shelved side-by-side in a row. All inline
-                elements can be placed within the element.</p>
+                        <tr class="filter-row" data-element="title">
+                            <td><code>&lt;title&gt;</code></td>
+                            <td>Defines the document's title that is shown in a 
+                                browser's title bar or a page's tab. It only contains text;
+                                 HTML tags within the element, if any, are also treated
+                                  as plain text.
+                         </td>
+                        </tr>
 
-            <p>An "element" is a single part of a webpage. Some elements are large and hold smaller elements like
-                containers. Some elements are small and are "nested" inside larger ones. By default, "inline elements"
-                appear next to one another in a webpage. They take up only as much width as they need in a page and fit
-                together horizontally like words in a sentence or books shelved side-by-side in a row. All inline
-                elements can be placed within the element.</p>
+                    </tbody>
 
-            <h1 id="terms">Define terms with HTML</h1>
+                </table>
 
-            <p>HTML provides several ways to convey description semantics, whether inline or as structured glossaries.
-                In this article, we'll cover how to properly mark up keywords when you're defining them.</p>
+            </section>
 
-            <table class="tab">
-                <tr>
-                    <th>Prerequisites:</th>
-                    <td>You need to be familiar with how to create a basic HTML document.</td>
-                </tr>
-                <tr>
-                    <th>Objective:</th>
-                    <td>Learn how to introduce new keywords and how to build description lists.</td>
-                </tr>
-            </table>
+            <section class="doc-section" id="sectioning-root">
+                <h2>Sectioning root</h2>
+                <table>
+                    <thead><tr><th>Element</th><th>Description</th></tr></thead>
+                    <tbody>
 
-            <p>When you need a term defined, you probably go straight to a dictionary or glossary. Dictionaries and
-                glossaries formally associate keywords with one or more descriptions, as in this case:</p>
+                        <tr class="filter-row" data-element="body">
 
-            <h1 id="attributes">Use Data Attributes</h1>
+                            <td><code>&lt;body&gt;</code></td>
+                            <td>Represents the content of an 
+                                HTML document. There can be only one such
+                                 element in a document.</td>
+        </tr>
+    </tbody>
+     </table>
+         </section>
 
-            <p>HTML is designed with extensibility in mind for data that should be associated with a particular element
-                but need not have any defined meaning. data-* attributes allow us to store extra information on
-                standard, semantic HTML elements without other hacks such as non-standard attributes, or extra
-                properties on DOM.</p>
 
-            <h1>HTML syntax</h1>
+            <section class="doc-section" id="content-sectioning">
+                <h2>Content sectioning</h2>
+                <p>Content sectioning elements allow you to organize the document content into logical pieces. Use the sectioning elements to create a broad outline for your page content, including header
+                     and footer navigation, and heading elements to identify sections of content.</p>
+                <table>
+                    <thead><tr><th>Element</th><th>Description</th></tr></thead>
 
-            <p>The syntax is simple. Any attribute on any element whose attribute name starts with data- is a data
-                attribute. Say you have some articles and you want to store some extra information that doesn't have any
-                visual representation. Just use data attributes.</p>
+                    <tbody>
 
-            <h1 id="images">Images</h1>
+                        <tr class="filter-row" data-element="address">
+                            <td><code>&lt;address&gt;</code></td>
+                            <td>Indicates that the enclosed HTML provides
+                                 contact information for a person or people, or for an organization.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="article">
 
-            <p>HTML provides a crossorigin attribute for images that, in combination with an appropriate CORS header,
-                allows images defined by the element that are loaded from foreign origins to be used in a
-                as if they had been loaded from the current origin.
+                            <td><code>&lt;article&gt;</code></td>
+                            <td>Represents a self-contained composition in a document, page, application, or site, 
+                                which is intended to be independently distributable or reusable (e.g., in syndication). Examples include a forum post, a magazine or newspaper article, a blog entry, a product card, a user-submitted comment,
+                                 an interactive widget or gadget, or any other independent item of content.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="aside">
+                            <td><code>&lt;aside&gt;</code></td>
 
-                See CORS settings attributes for details on how the crossorigin attribute is used.
+                            <td>Represents a self-contained composition in a document,
+                                 page, application, or site, which is intended to be independently
+                                  distributable or reusable (e.g., in syndication). Examples include a forum post,
+                                   a magazine or newspaper article, a blog entry, a product card, a user-submitted
+                                    comment, an interactive widget or gadget, or any other independent item 
+                                    of content.</td>
 
-                In this article
-                Security and tainted canvases
-                Storing an image from a foreign origin
-                See also
-                Security and tainted canvases
-                Because the pixels in a canvas's bitmap can come from a variety of sources, including images or
-                videos retrieved from other hosts, it's inevitable that security problems may arise.
+                        </tr>
+                        <tr class="filter-row" data-element="footer">
+                            <td><code>&lt;footer&gt;</code></td>
+                            <td>Represents a footer for its nearest ancestor sectioning content or sectioning root 
+                                element. A <footer> typically contains information about the author of 
+                                the section, copyright data, or links to related documents.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="header">
+                            <td><code>&lt;header&gt;</code></td>
+                            <td>Represents introductory content, typically a group of introductory or navigational aids. It may contain
+                                 some heading elements but also a logo, a search form, an author name, and other elements.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="h1 h2 h3 h4 h5 h6">
+                            <td><code>&lt;h1&gt;–&lt;h6&gt;</code></td>
+                            <td>Represent six
+                                 levels of section headings. h1 is the highest section 
+                                    level and h6 is the lowest.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="main">
+                            <td><code>&lt;main&gt;</code></td>
+                            <td>Represents the dominant content of the body of a document. The main content area 
+                                consists of content that is directly related to or expands upon the central topic of
+                                 a document, or the central functionality of an application.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="nav">
+                            <td><code>&lt;nav&gt;</code></td>
+                            <td>Represents a section of a page whose purpose is to provide navigation links,
+                                 either within the current document or to other documents. Common examples of 
+                                navigation sections are menus, tables of contents, and indexes.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="section">
+                            <td><code>&lt;section&gt;</code></td>
+                            <td>Represents a generic standalone section of a document, which doesn't have a more
+                                 specific semantic element to represent it. Sections
+                                 should always have a heading, with very few exceptions.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-                As soon as you draw into a canvas any data that was loaded from another origin without CORS
-                approval, the canvas becomes tainted. A tainted canvas is one which is no longer considered secure,
-                and any attempts to retrieve image data back from the canvas will cause an exception to be thrown.
+            <section class="doc-section" id="text-content">
 
-                If the source of the foreign content is an HTML or SVG element, attempting to retrieve the
-                contents of the canvas isn't allowed.
+                <h2>Text content</h2>
+                <p>.Use HTML text content elements to organize blocks or sections of content placed between the opening <body> and closing </body> tags. Important for accessibility and SEO,
+                     these elements identify the purpose or structure of that content.</p>
+                <table>
+                    <thead><tr><th>Element</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr class="filter-row" data-element="blockquote">
+                            <td><code>&lt;blockquote&gt;</code></td>
+                            <td>Indicates that the enclosed text is an extended quotation. Usually, this is rendered 
+                                visually by indentation. A URL for the source of the quotation may be given using
+                                 the cite attribute, while a text representation of the source can be given using the <cite> element.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="div">
 
-                If the foreign content comes from an image obtained from either as HTMLCanvasElement or ImageBitMap,
-                and the image source doesn't meet the same origin rules, attempts to read the canvas's contents are
-                blocked.
+                            <td><code>&lt;div&gt;</code></td>
+                            <td>The generic container for flow content. It has no effect on the content or layout until styled in some way using
+                                 CSS (e.g., styling is directly applied to it, or some kind of layout model like flexbox is applied to its parent element).</td>
+                        </tr>
+                        <tr class="filter-row" data-element="dl">
+                            <td><code>&lt;dl&gt;</code></td>
+                        <td>Represents a description list. The element encloses a list of groups of terms (specified using the <dt> element) and descriptions (provided by <dd> elements). 
+                            Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).</td>
 
-                Calling any of the following on a tainted canvas will result in an error:
 
-                Calling getImageData() on the canvas's context
-                Calling toBlob(), toDataURL() or captureStream() on the element itself
-                Attempting any of these when the canvas is tainted will cause a SecurityError to be thrown. This
-                protects users from having private data exposed by using images to pull information from remote
-                websites without permission.
+                        </tr>
 
-                Storing an image from a foreign origin
-                In this example, we wish to permit images from a foreign origin to be retrieved and saved to
-                local storage. Implementing this requires configuring the server as well as writing code for the
-                website itself.
+                        <tr class="filter-row" data-element="dd">
+                            <td><code>&lt;dd&gt;</code></td>
+                            <td>Provides the description, definition, or value for the preceding term dt in a description
+                                 list dl .</td>
+                        </tr>
+                        <tr class="filter-row" data-element="li">
+                            <td><code>&lt;li&gt;</code></td>
+                            <td>Represents an item in a list. It must be contained in a parent element: an ordered list ol ,
+                                 an unordered list ul , or a menu menu. In menus and unordered lists, list items are usually
+                                  displayed using bullet points.
+                                 In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.</td>
 
-                Web server configuration
-                The first thing we need is a server that's configured to host images with the
-                Access-Control-Allow-Origin header configured to permit cross-origin access to image files.
 
-                Let's assume we're serving our site using Apache. Consider the HTML5 Boilerplate Apache server
-                configuration file for CORS images, shown below:</p>
 
-            <h1 id="javascript">Add Java Script</h1>
+                        </tr>
+                        <tr class="filter-row" data-element="ol">
+                            <td><code>&lt;ol&gt;</code></td>
+                            <td>Represents an ordered list of items — typically rendered as a numbered list.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="p">
+                            <td><code>&lt;p&gt;</code></td>
+                            <td>Represents a paragraph. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, 
+                                but HTML paragraphs can be any structural grouping of related content, such as images or form fields.</td>
 
-            <p>Take your webpages to the next level by harnessing JavaScript. Learn in this article how to trigger
-                JavaScript right from your HTML documents.</p>
 
-            <table class="tab">
-                <tr>
-                    <th>Prerequisites:</th>
-                    <td>You need to be familiar with how to create a basic HTML document.</td>
-                </tr>
-                <tr>
-                    <th>Objective:</th>
-                    <td>Learn how to trigger JavaScript in your HTML file, and learn the most important best practices
-                        for keeping JavaScript accessible.</td>
-                </tr>
-            </table>
+                        </tr>
+                        <tr class="filter-row" data-element="pre">
+                            <td><code>&lt;pre&gt;</code></td>
+                            <td>Represents preformatted text which is to be presented exactly 
+                             as written in the HTML file. The text is typically rendered using a non-proportional,
+                             or monospaced, font. Whitespace inside this element is displayed as written.</td>
 
-            <h1>How to trigger JavaScript from HTML</h1>
 
-            <p>Within a browser, JavaScript doesn't do anything by itself. You run JavaScript from inside your HTML
-                webpages. To call JavaScript code from within HTML, you need the element. Accessibility is a major issue
-                in any software development. JavaScript can make your website more accessible if you use it wisely, or
-                it can become a disaster if you use scripting without care. To make JavaScript work in your favor, it's
-                worth knowing about certain best practices for adding JavaScript:</p>
+                        </tr>
+                        <tr class="filter-row" data-element="ul">
+                            <td><code>&lt;ul&gt;</code></td>
+                            <td>Represents an unordered list of items, typically rendered as a bulleted list.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-            <h1 id="author">Author fast-loading HTML pages</h1>
+            <section class="doc-section" id="inline-text">
+                <h2>Inline text semantics</h2>
+                <p>Use the HTML inline text semantic to define the meaning, structure, or style of a word, line, or any arbitrary piece of text.
 
-            <p>An optimized web page not only provides for a more responsive site for your visitors but also reduces the
-                load on your web servers and internet connection. This can be crucial for high volume sites or sites
-                which have a spike in traffic due to unusual circumstances such as breaking news stories. This article
-                describes how to improve page load times based on common knowledge and experimentation.
+</p>
+                <table>
+                    <thead><tr><th>Element</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr class="filter-row" data-element="a">
+                            <td><code>&lt;a&gt;</code></td>
+                            <td>Together with its href attribute, creates a hyperlink to
+                                 web pages, files, email addresses, locations within the current page, or anything else a URL can address.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="abbr">
+                            <td><code>&lt;abbr&gt;</code></td>
+                            <td>Represents an abbreviation or acronym.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="b">
+                            <td><code>&lt;b&gt;</code></td>
+                            <td>Used to draw the reader's attention to the element's contents, which are not otherwise granted special importance.
+                                 This was formerly known as the Boldface element, and most browsers still draw the text in boldface. However, you should
+                                  not use <b> for styling text or granting importance. If you wish to create boldface text, you should use the CSS font-weight property.
+                                 If you wish to indicate an element is of special importance, you should use the <strong> element.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="br">
+                            <td><code>&lt;br&gt;</code></td>
+                            <td>Produces a line break in text (carriage-return).
+                                 It is useful for writing a poem or an address, where the division of lines is significant.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="cite">
+                            <td><code>&lt;cite&gt;</code></td>
+                            <td>Used to mark up the title of a creative work. The reference may be in an 
+                                abbreviated form according to context-appropriate conventions related to citation metadata.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="code">
+                            <td><code>&lt;code&gt;</code></td>
+                            <td>Displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code.
+                                 By default, the content text is displayed using the user agent's default monospace font.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="em">
+                            <td><code>&lt;em&gt;</code></td>
+                            <td>Marks text that has stress emphasis. 
+                                The <em> element can be nested, with each nesting level indicating a greater degree of emphasis.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="i">
+                            <td><code>&lt;i&gt;</code></td>
+                            <td>Represents a range of text that is set off from the normal text for some reason, such as idiomatic text, technical 
+                                terms, and taxonomical designations, among others. Historically, these have been presented 
+                                using italicized type, which is the original source of the <i> naming of this element.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="mark">
+                            <td><code>&lt;mark&gt;</code></td>
+                            <td>Represents text which is marked or highlighted for reference 
+                                or notation purposes due to the marked passage's relevance in the enclosing context.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="q">
+                            <td><code>&lt;q&gt;</code></td>
+                            <td>Indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding 
+                                the text in quotation marks. This element is intended for short quotations that don't
+                                 require paragraph breaks; for long quotations use the <blockquote> element.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="small">
+                            <td><code>&lt;small&gt;</code></td>
+                            <td>Represents side-comments and small print, like copyright and legal text, independent of its
+                                 styled presentation. By default, it renders text within it one font size smaller, such as from small to x-small.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="span">
+                            <td><code>&lt;span&gt;</code></td>
+                            <td>A generic inline container for phrasing content, which does not inherently represent anything. 
+                                It can be used to group elements for styling purposes (using the class or id attributes), or because they share 
+                                attribute values, such as lang. It should be used only when no other semantic element is appropriate. <span> is very
+                                     much like a div element,but div is a block-level element whereas a <span> is an inline-level element.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="strong">
+                            <td><code>&lt;strong&gt;</code></td>
+                            <td>Indicates that its contents have strong importance, seriousness, or urgency. 
+                                Browsers typically render the contents in bold type.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="sub">
+                            <td><code>&lt;sub&gt;</code></td>
+                            <td>Specifies inline text which should be displayed as subscript for solely typographical reasons. Subscripts are 
+                                typically rendered with a lowered baseline using smaller text.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="sup">
+                            <td><code>&lt;sup&gt;</code></td>
+                            <td>Specifies inline text which is to be displayed as superscript for solely typographical reasons.
+                                 Superscripts are usually rendered with a raised baseline using smaller text.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="time">
+                            <td><code>&lt;time&gt;</code></td>
+                            <td>Represents a specific period in time. It may include the datetime attribute to translate dates into machine-readable format, 
+                                allowing for better search engine results or custom features such as reminders.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-                Optimizing page load performance is not just for content which will be viewed by narrowband dial-up or
-                mobile device visitors. It is just as important for broadband content and can lead to dramatic
-                improvements even for your visitors with the fastest connections.</p>
+            <section class="doc-section" id="image-media">
+                <h2>Image and multimedia</h2>
+                <p>HTML supports various multimedia resources such as images, audio, and video.</p>
+                <table>
+                    <thead><tr><th>Element</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr class="filter-row" data-element="area">
+                            <td><code>&lt;area&gt;</code></td>
+                            <td>Defines an area inside an image map that has predefined clickable areas.
+                                 An image map allows geometric areas on an image to be associated with hyperlink.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="audio">
+                            <td><code>&lt;audio&gt;</code></td>
+                            <td>Used to embed sound content in documents. It may contain one or more audio sources, represented using the src attribute 
+                                or the source element: the browser will choose the most suitable one.
+                                 It can also be the destination for streamed media, using a MediaStream.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="img">
+                            <td><code>&lt;img&gt;</code></td>
+                            <td>Embeds an image into the document.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="map">
+                            <td><code>&lt;map&gt;</code></td>
+                            <td>Used with <area> elements to define an image map (a clickable link area).</td>
+                        </tr>
+                        <tr class="filter-row" data-element="picture">
+                            <td><code>&lt;picture&gt;</code></td>
+                            <td>Contains zero or more <source> elements and one <img> element to offer alternative versions 
+                                of an image for different display/device scenarios.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="source">
+                            <td><code>&lt;source&gt;</code></td>
+                            <td>Specifies multiple media resources for the picture, the audio element, or the video element. It is a
+                                 void element, meaning that it has no content and does not have a closing tag. It is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given 
+                                their differing support for image file formats and media file formats.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="track">
+                            <td><code>&lt;track&gt;</code></td>
+                            <td>Used as a child of the media elements, audio and video. It lets you specify timed text tracks (or time-based data), for example to automatically handle subtitles. The 
+                                tracks are formatted in WebVTT format (.vtt files)—Web Video Text Tracks.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="video">
+                            <td><code>&lt;video&gt;</code></td>
+                            <td>	Embeds a media player which supports video playback into the document. You can also use video 
+                                 for audio content, but the audio element may provide a more appropriate user experience.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-            <h1>Tips</h1>
+            <section class="doc-section" id="embedded-content">
+                <h2>Embedded content</h2>
+                <table>
+                    <thead><tr><th>Element</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr class="filter-row" data-element="embed">
+                            <td><code>&lt;embed&gt;</code></td>
+                            <td>Embeds external content at the specified point in the document. This
+                                 content is handled by the browser or an external application.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="iframe">
+                            <td><code>&lt;iframe&gt;</code></td>
+                            <td>Represents a nested browsing context, embedding another document into the current one.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="object">
+                            <td><code>&lt;object&gt;</code></td>
+                            <td>Represents an external resource, which can be treated as an image, 
+                                a nested browsing context, or a resource to be handled by a plugin.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-            <p>Page weight is by far the most important factor in page-load performance.
+            <section class="doc-section" id="svg-mathml">
+                <h2>SVG and MathML</h2>
+                <table>
+                    <thead><tr><th>Element</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr class="filter-row" data-element="svg">
+                            <td><code>&lt;svg&gt;</code></td>
+                            <td>Container defining a new coordinate system and viewport. It is used as the outermost element of SVG documents, 
+                                but it can also be used to embed an SVG fragment inside an SVG or HTML document.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="math">
+                            <td><code>&lt;math&gt;</code></td>
+                            <td>The top-level element in MathML. Every valid MathML instance must be wrapped in it. In addition, you must not nest a second <math> element in another,
+                                 but you can have an arbitrary number of other child elements in it.</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </section>
 
-                Reducing page weight through the elimination of unnecessary whitespace and comments, commonly known as
-                minimization, and by moving inline script and CSS into external files, can improve download performance
-                with minimal need for other changes in the page structure.</p>
+            <section class="doc-section" id="scripting">
+                <h2>Scripting</h2>
+                <table>
+                    <thead><tr><th>Element</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr class="filter-row" data-element="canvas">
+                            <td><code>&lt;canvas&gt;</code></td>
+                            <td>Container element to use with either the canvas scripting API or the WebGL API to draw graphics and animations.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="noscript">
+                            <td><code>&lt;noscript&gt;</code></td>
+                            <td>Defines a section of HTML to be inserted if a script type on the page is
+                                 unsupported or if scripting is currently turned off in the browser.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </section>
 
-            <h1 id="global">Global Attributes</h1>
+            <section class="doc-section" id="demarcating-edits">
+                <h2>Demarcating edits</h2>
+                <table>
+                    <thead><tr><th>Element</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr class="filter-row" data-element="del">
+                            <td><code>&lt;del&gt;</code></td>
+                            <td>Represents a range of text that has been deleted from a document. This can be used when rendering "track changes" or source code diff information, for example. The <ins> element can be used
+                                 for the opposite purpose: to indicate text that has been added to the document.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="ins">
+                            <td><code>&lt;ins&gt;</code></td>
+                            <td>Represents a range of text that has been added to a document. You can use the del element to similarly represent a range of text that has been deleted from the document.
+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-            <p>Global attributes are attributes common to all HTML elements; they can be used on all elements, though
-                they may have no effect on some elements. Every HTML element is a member of one or more content
-                categories — these categories group elements that share common characteristics.
-                HTML comments are used to add explanatory notes to the markup or to prevent the browser from
-                interpreting specific parts of the document.</p>
+            <section class="doc-section" id="table-content">
+                <h2>Table content</h2>
+                <table>
+                    <thead><tr><th>Element</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr class="filter-row" data-element="caption">
+                            <td><code>&lt;caption&gt;</code></td>
+                            <td>Specifies the caption (or title) of a table.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="col">
+                            <td><code>&lt;col&gt;</code></td>
+                            <td>Defines one or more columns in a column group represented by its implicit or explicit parent
+                                 colgroup element. The col 
+                                element is only valid as a child of a colgroup element that has no span attribute defined.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="colgroup">
+                            <td><code>&lt;colgroup&gt;</code></td>
+                        
+                        <td>defines a group of columns within a table.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="table">
+                            <td><code>&lt;table&gt;</code></td>
+                            <td>Represents tabular data-that is, information presented in a two-dimensional 
+                                table comprised of rows and columns of cells containing data.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="tbody">
+                            <td><code>&lt;tbody&gt;</code></td>
+                            <td>Encapsulates a set of table rows (tr elements), indicating that they comprise the body
+                                 of a table's (main) data.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="td">
+                            <td><code>&lt;td&gt;</code></td>
+                            <td>A child of the tr element, it defines a cell of a table that contains data.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="tfoot">
+                            <td><code>&lt;tfoot&gt;</code></td>
+                            <td>Encapsulates a set of table rows (tr elements), indicating that they comprise the foot of a table with information about the table's columns. 
+                                This is usually a summary of the columns, e.g., a sum of the given numbers in a column.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="th">
+                            <td><code>&lt;th&gt;</code></td>
+                            <td>A child of the tr element, it defines a cell as the header of a group of table cells. The nature of this 
+                                group can be explicitly defined by the scope and headers attributes.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="thead">
+                            <td><code>&lt;thead&gt;</code></td>
+                            <td>Encapsulates a set of table rows ( tr elements), indicating that they comprise the head of a table with information about the table's
+                                 columns. This is usually in the form of column headers ( th elements).</td>
+                        </tr>
+                        <tr class="filter-row" data-element="tr">
+                            <td><code>&lt;tr&gt;</code></td>
+                            <td>Defines a row of cells in a table. The row's cells can then
+                                 be established using a mix of td (data cell) and th (header cell) elements.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-        </div>
+            <section class="doc-section" id="forms">
+                <h2>Forms</h2>
+                <table>
+                    <thead><tr><th>Element</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr class="filter-row" data-element="button">
+                            <td><code>&lt;button&gt;</code></td>
+                            <td>An interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated,
+                                 it performs an action, such as submitting a form or opening a dialog.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="datalist">
+                            <td><code>&lt;datalist&gt;</code></td>
+                            <td>Contains a set of option elements that represent the permissible or
+                                 recommended options available to choose from within other controls.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="fieldset">
+                            <td><code>&lt;fieldset&gt;</code></td>
+                            <td>Used to group several controls as well as labels (label) within a web form.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="form">
+                            <td><code>&lt;form&gt;</code></td>
+                            <td>Represents a document section containing interactive controls for submitting information.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="input">
+                            <td><code>&lt;input&gt;</code></td>
+                            <td>Used to create interactive controls for web-based forms
+                                 to accept data from the user; a wide variety of types
+                                  of input data and control widgets are available, depending
+                                   on the device and user agent. The input  element is one of the most powerful and complex in all of HTML 
+                                due to the sheer number of combinations of input types and attributes.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="label">
+                            <td><code>&lt;label&gt;</code></td>
+                            <td>Represents a caption for an item in a user interface.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="legend">
+                            <td><code>&lt;legend&gt;</code></td>
+                            <td>Represents a caption for the content of its parent fieldset.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="meter">
+                            <td><code>&lt;meter&gt;</code></td>
+                            <td>Represents either a scalar value within a known range or a fractional value.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="optgroup">
+                            <td><code>&lt;optgroup&gt;</code></td>
+                            <td>Creates a grouping of options within a select element.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="option">
+                            <td><code>&lt;option&gt;</code></td>
+                            <td>Used to define an item contained in a select, an optgroup, or a datalist element. 
+                                As such, option can represent menu items in popups and other lists of items in an HTML document.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="output">
+                            <td><code>&lt;output&gt;</code></td>
+                            <td>Container element into which a site or app can inject the results of a calculation or the outcome of a user action.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="progress">
+                            <td><code>&lt;progress&gt;</code></td>
+                            <td>Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="select">
+                            <td><code>&lt;select&gt;</code></td>
+                            <td>Represents a control that provides a menu of options.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="textarea">
+                            <td><code>&lt;textarea&gt;</code></td>
+                            <td>Represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable
+                                 amount of free-form text, for example, a comment on a review or feedback form.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-        <div class="right">
-            <h1>In This Artical</h1>
-            <button class="btn">menu</button>
+            <section class="doc-section" id="interactive-elements">
+                <h2>Interactive elements</h2>
+                <table>
+                    <thead><tr><th>Element</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr class="filter-row" data-element="details">
+                            <td><code>&lt;details&gt;</code></td>
+                            <td>Creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state.
+                                 A summary or label must be provided using the summary element.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="dialog">
+                            <td><code>&lt;dialog&gt;</code></td>
+                            <td>Represents a dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="summary">
+                            <td><code>&lt;summary&gt;</code></td>
+                            <td>Specifies a summary, caption, or legend for a details element's disclosure box.
+                                 Clicking the summary element toggles the state of the parent details element open and closed.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-            <nav class="rightlink">
-                <a href="#begnnier-tutorial">Begnnier Tutorial</a>
-                <a href="#guides">Guides</a>
-                <a href="#how-to">How To</a>
-                <a href="#reference">Reference</a>
-                <a href="#related-topics">Related Topics</a>
+            <section class="doc-section" id="web-components">
+                <h2>Web Components</h2>
+                <table>
+                    <thead><tr><th>Element</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr class="filter-row" data-element="slot">
+                            <td><code>&lt;slot&gt;</code></td>
+                            <td>Add the original description here.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="template">
+                            <td><code>&lt;template&gt;</code></td>
+                            <td>Add the original description here.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="doc-section" id="obsolete">
+                <h2>Obsolete and deprecated elements</h2>
+                <p>Warning: These are old HTML elements that are deprecated and should not be used. You should never use them in new projects, and you
+                     should replace them in old projects as soon as you can. They are listed here for completeness only.</p>
+                <table>
+                    <thead><tr><th>Element</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr class="filter-row" data-element="acronym">
+                            <td><code>&lt;acronym&gt;</code></td>
+                            <td>Allows authors to clearly indicate a sequence of characters that compose an acronym or abbreviation for a word.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="big">
+                            <td><code>&lt;big&gt;</code></td>
+                            <td>Renders the enclosed text at a font size one level larger than the surrounding text 
+                                (medium becomes large, for example). The size is capped at the browser's maximum permitted font size.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="center">
+                            <td><code>&lt;center&gt;</code></td>
+                            <td>Displays its block-level or inline contents centered horizontally within its containing element.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="font">
+                            <td><code>&lt;font&gt;</code></td>
+                            <td>Defines the font size, color and face for its content.</td>
+                        </tr>
+                        <tr class="filter-row" data-element="marquee">
+                            <td><code>&lt;marquee&gt;</code></td>
+                            <td>Used to insert a scrolling area of text. You can control what happens when the text
+                                 reaches the edges of its content area using its attributes.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="doc-section" id="see-also">
+                <h2>See also</h2>
+                <p>Element interface</p>
+            </section>
+
+            <p class="back-top"><a href="#top">Back to top <i class="fa-solid fa-arrow-up"></i></a></p>
+        </main>
+
+        <aside class="right-sidebar">
+            <h3>In this article</h3>
+            <nav class="article-index" aria-label="On this page">
+                <a href="#main-root">Main root</a>
+                <a href="#document-metadata">Document metadata</a>
+                <a href="#sectioning-root">Sectioning root</a>
+                <a href="#content-sectioning">Content sectioning</a>
+                <a href="#text-content">Text content</a>
+                <a href="#inline-text">Inline text semantics</a>
+                <a href="#image-media">Image and multimedia</a>
+                <a href="#embedded-content">Embedded content</a>
+                <a href="#svg-mathml">SVG and MathML</a>
+                <a href="#scripting">Scripting</a>
+                <a href="#demarcating-edits">Demarcating edits</a>
+                <a href="#table-content">Table content</a>
+                <a href="#forms">Forms</a>
+                <a href="#interactive-elements">Interactive elements</a>
+                <a href="#web-components">Web Components</a>
+                <a href="#obsolete">Obsolete and deprecated elements</a>
+                <a href="#see-also">See also</a>
             </nav>
+        </aside>
+
+    </div>
+  <footer class="mdn-footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <h2>MDN</h2>
+            <p>Your blueprint for a better internet.</p>
+
+            <div class="social-icons">
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-bluesky"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-mastodon"></i>
+            <i class="fa-sharp-duotone fa-solid fa-rss"></i>
+        </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>MDN</h3>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Mozilla Careers</a>
+            <a href="#">Advertise with us</a>
+            <a href="#">MDN Plus</a>
+            <a href="#">Product help</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contribute</h3>
+            <a href="#">MDN Community</a>
+            <a href="#">Community resources</a>
+            <a href="#">Writing guidelines</a>
+            <a href="#">MDN Discord</a>
+            <a href="#">MDN on GitHub</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Developers</h3>
+            <a href="#">Web technologies</a>
+            <a href="#">Learn web development</a>
+            <a href="#">Guides</a>
+            <a href="#">Tutorials</a>
+            <a href="#">Glossary</a>
+            <a href="#">Hacks blog</a>
         </div>
 
     </div>
 
-    <footer class="footer">
-        <div class="footer-box">
-
-            <div class="footer-logo">
-                <h2>MDN</h2>
-                <p>Your blueprint for a better internet.</p>
-
-                <div class="icons">
-                    <i class="fa-brands fa-github"></i>
-                    
-                    <i class="fa-solid fa-rss"></i>
-                </div>
-            </div>
-
-            <div class="footer-links">
-                <h3>MDN</h3>
-                <a href="#">About</a>
-                <a href="#">Blog</a>
-                <a href="#">Mozilla Careers</a>
-                
-            </div>
-
-            <div class="footer-links">
-                <h3>Contribute</h3>
-                <a href="#">MDN Community</a>
-                <a href="#">Community resources</a>
-                <a href="#">Writing guidelines</a>
-                
-            </div>
-
-            <div class="footer-links">
-                <h3>Developers</h3>
-                <a href="#">Web technologies</a>
-                <a href="#">Learn web development</a>
-                <a href="#">Guides</a>
-               
-            </div>
-
-        </div>
-    </footer>
-
+    <div class="footer-bottom">
+        <p>
+            Website Privacy Notice |
+            Terms |
+            Legal
+        </p>
+        <p>© 1998–2026 MDN contributors.</p>
+        <p>Content available under a Creative Commons license.</p>
+    </div>
+</footer>
 </body>
-
-</html> 
+</html>
